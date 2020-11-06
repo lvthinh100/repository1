@@ -2,11 +2,17 @@
 
 using namespace std;
 
+bool isEven(int n)
+{
+	if (n==1) return false;
+	return !isEven(n-1);
+}
+
 int main(){
 	int a;
 	cin >> a;
-	cout << "Hello" ;
-	cout << "sua thu xem";
+	if(isEven(a)) cout<<a<<" la so chan";
+	else cout<<a<<" la so le";
 	return 0;
 	
 }
